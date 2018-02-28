@@ -10,6 +10,7 @@ gem 'rails', '5.2.0.rc1'
 gem 'redis'
 gem 'bootsnap'
 gem 'slim'
+gem 'jquery-rails'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
