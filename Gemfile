@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.2.0.rc1'
 gem 'redis'
 gem 'bootsnap'
+gem 'slim'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
