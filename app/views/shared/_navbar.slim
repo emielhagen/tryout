@@ -23,11 +23,9 @@
             | Contact
         li.nav-item
           - if user_signed_in?
-            /! Links when logged in
-            = link_to "Host", "#", class: ""
-            = link_to "Trips", "#", class: ""
-            = link_to "Messages", "#", class: ""
-            = image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "", id: "navbar-wagon-menu", "data-toggle" => "dropdown"
+            a.nav-link[href='#']
+              /! Links when logged in
+              .fas.fa-align-justify#dropdown
           - else
             /! Login link (when logged out)
             = link_to t(".sign_in", default: "Login"), new_user_session_path, class: ""
