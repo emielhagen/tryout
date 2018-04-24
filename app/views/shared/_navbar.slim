@@ -1,0 +1,31 @@
+.nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+  .container
+    a.navbar-brand[href="#"]
+      = link_to root_path, class: "navbar-expand-lg" do
+        = image_tag "logo.png", height: 50
+    button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"]
+      span.navbar-toggler-icon
+    #navbarResponsive.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item.active
+          a.nav-link[href="#"]
+            | Home
+            span.sr-only
+              | (current)
+        li.nav-item
+          a.nav-link[href="#"]
+            | About
+        li.nav-item
+          a.nav-link[href="#"]
+            | Services
+        li.nav-item
+          a.nav-link[href="#"]
+            | Contact
+        li.nav-item
+          - if user_signed_in?
+            a.nav-link[href='#']
+              /! Links when logged in
+              .fas.fa-align-justify#dropdown
+          - else
+            /! Login link (when logged out)
+            = link_to t(".sign_in", default: "Login"), new_user_session_path, class: ""

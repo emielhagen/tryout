@@ -1,0 +1,11 @@
+.row
+  .col-md-6.col-md-offset-3
+    .box
+      = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .form-inputs
+          = f.input :email, required: true, autofocus: true
+          = f.input :password, required: true
+          = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+        .form-actions
+          = f.button :submit, "Log in", class: 'round-button'
+      = render "devise/shared/links"

@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta charset="UTF-8" /
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /
+    script crossorigin="anonymous" defer="" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+
+
+
+    title TODO
+    = csrf_meta_tags
+    = action_cable_meta_tag
+    = stylesheet_link_tag 'application', media: 'all'
+    /! Uncomment if you import CSS in app/javascript/packs/application.js
+  body
+    = render 'shared/navbar'
+    = render 'shared/flashes'
+    = yield
+    = render 'shared/footer'
+    = javascript_include_tag 'application'
+    = javascript_pack_tag 'application'
