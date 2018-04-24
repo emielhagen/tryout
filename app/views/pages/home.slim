@@ -3,7 +3,9 @@ header.business-header
     .row
       .col-lg-12
         h1.display-3.text-center.text-white.mt-4
-          | Business Name or Tagline
+          = link_to 'Give me a joke', root_path(joke: 'true')
+        h1
+          = @joke if @joke
 .container
   .row
     .col-sm-8

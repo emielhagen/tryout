@@ -11,6 +11,7 @@ gem 'redis'
 gem 'bootsnap'
 gem 'slim'
 gem 'jquery-rails'
+gem 'httparty'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
